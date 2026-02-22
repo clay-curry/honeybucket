@@ -2,6 +2,11 @@
 
 This runbook is designed for one operator and one primary assistant account.
 
+For production host deployment automation, use:
+
+- `docs/operations/production-gateway-runbook.md`
+- `ops/README.md`
+
 ## 1) Environment prerequisites
 
 - OS: macOS or Linux (Windows via WSL also works)
@@ -115,3 +120,19 @@ Technical setup is complete when:
 2. One channel can execute assistant tasks end-to-end.
 3. Pairing/approval controls are actively enforced.
 4. At least 3 high-value routines run successfully (e.g., daily summary, file triage, reminder workflow).
+
+## 10) Production automation entrypoints
+
+Linux VPS (preferred):
+
+```bash
+sudo bash ops/linux/provision-ubuntu.sh
+bash ops/linux/install-openclaw-mvp.sh
+sudo bash ops/linux/harden-openclaw-systemd.sh
+sudo /usr/local/libexec/openclaw/validate-go-live.sh
+```
+
+Local alternatives:
+
+- macOS: `bash ops/macos/bootstrap-local.sh`
+- Docker: `bash ops/docker/docker-setup.sh`

@@ -1,0 +1,10 @@
+[Unit]
+Description=OpenClaw security audit
+After=openclaw-gateway.service
+
+[Service]
+Type=oneshot
+User=__OPENCLAW_USER__
+Group=__OPENCLAW_GROUP__
+EnvironmentFile=__OPENCLAW_ETC__/openclaw.env
+ExecStart=__OPS_SCRIPT_DIR__/security-audit.sh

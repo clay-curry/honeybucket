@@ -1,0 +1,10 @@
+[Unit]
+Description=Run OpenClaw restart-rate watcher every hour
+
+[Timer]
+OnCalendar=hourly
+AccuracySec=1m
+Persistent=true
+
+[Install]
+WantedBy=timers.target

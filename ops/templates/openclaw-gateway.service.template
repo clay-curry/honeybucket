@@ -1,0 +1,21 @@
+[Unit]
+Description=OpenClaw Gateway
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=__OPENCLAW_USER__
+Group=__OPENCLAW_GROUP__
+WorkingDirectory=__OPENCLAW_HOME__
+EnvironmentFile=__OPENCLAW_ETC__/openclaw.env
+ExecStart=__OPENCLAW_BIN__ gateway --port 18789 --bind loopback
+Restart=always
+RestartSec=5
+NoNewPrivileges=true
+ProtectSystem=full
+ProtectHome=true
+ReadWritePaths=__OPENCLAW_HOME__ __OPENCLAW_LOG_DIR__ /tmp/openclaw
+
+[Install]
+WantedBy=multi-user.target

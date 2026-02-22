@@ -1,1 +1,10 @@
 secrets/
+ops/docker/.env
+ops/docker/config/openclaw.json
+ops/docker/state/
+ops/docker/logs/
+ops/aws/terraform/.terraform/
+ops/aws/terraform/*.tfstate
+ops/aws/terraform/*.tfstate.*
+ops/aws/terraform/tfplan
+ops/aws/terraform/runtime.auto.tfvars

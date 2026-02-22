@@ -7,6 +7,10 @@ This repository starts as a planning and execution workspace for the first 30 da
 ## Project docs
 
 - `docs/technical-runbook.md`: technical setup runbook for OpenClaw
+- `docs/operations/production-gateway-runbook.md`: production host deployment runbook and cutover flow
+- `docs/operations/host-provisioning-checklist.md`: Ubuntu VPS provisioning checklist
+- `docs/operations/secrets-and-env-policy.md`: required env vars, storage, and rotation policy
+- `docs/operations/validation-and-go-live-checklist.md`: validation tests and go-live criteria
 - `docs/month-1-roadmap.md`: week-by-week build plan with effort estimates
 - `docs/month-1-deliverables.csv`: importable tracker (Notion/Sheets/Jira)
 - `docs/project-charter.md`: month-1 PM charter (budget, objectives, success criteria, scope)
@@ -21,6 +25,18 @@ This repository starts as a planning and execution workspace for the first 30 da
 
 - `plans/`: used for tracking draft plans toward milestone objectives
 - `plans/weekly-status-template.md`: weekly RAG status report template (progress, risks, decisions, next-week plan)
+
+## Operations automation
+
+- `ops/linux/provision-ubuntu.sh`: baseline Ubuntu 24.04 provisioning (packages, Node 22, firewall, service account)
+- `ops/linux/install-openclaw-mvp.sh`: minimum viable OpenClaw install and daemon bootstrap
+- `ops/linux/harden-openclaw-systemd.sh`: hardened `systemd` service + timer setup
+- `ops/scripts/`: health check, security audit, backup, restore, rollback, and go-live validation scripts
+- `ops/templates/`: hardened gateway config and `systemd` unit templates
+- `ops/macos/bootstrap-local.sh`: local macOS alternative bootstrap
+- `ops/docker/`: Docker alternative (`docker-compose.yml`, Dockerfile, and setup script)
+- `ops/aws/`: Terraform-based AWS EC2 baseline provisioning (`configure-ec2-baseline.sh`)
+- `docker-setup.sh`: root-level wrapper for `ops/docker/docker-setup.sh`
 
 ## Suggested execution cadence
 

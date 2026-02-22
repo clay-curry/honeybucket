@@ -1,0 +1,28 @@
+services:
+  openclaw-gateway:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    env_file:
+      - .env
+    command: ["gateway", "--port", "18789", "--bind", "0.0.0.0"]
+    ports:
+      - "127.0.0.1:18789:18789"
+    volumes:
+      - ./state:/var/lib/openclaw
+      - ./logs:/tmp/openclaw
+      - ./config/openclaw.json:/etc/openclaw/openclaw.json:ro
+
+  openclaw-cli:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    profiles: ["tools"]
+    env_file:
+      - .env
+    volumes:
+      - ./state:/var/lib/openclaw
+      - ./logs:/tmp/openclaw
+      - ./config/openclaw.json:/etc/openclaw/openclaw.json:ro
+    command: ["status", "--deep"]

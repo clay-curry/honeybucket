@@ -1,0 +1,49 @@
+{
+  "gateway": {
+    "mode": "local",
+    "bind": "loopback",
+    "port": 18789,
+    "auth": {
+      "mode": "token",
+      "token": "__OPENCLAW_GATEWAY_TOKEN__"
+    }
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "channels": {
+    "telegram": {
+      "dmPolicy": "pairing",
+      "groups": {
+        "*": {
+          "requireMention": true
+        }
+      }
+    }
+  },
+  "tools": {
+    "profile": "messaging",
+    "fs": {
+      "workspaceOnly": true
+    },
+    "deny": [
+      "group:automation",
+      "group:runtime",
+      "group:fs",
+      "exec",
+      "process",
+      "gateway",
+      "cron"
+    ],
+    "exec": {
+      "security": "deny",
+      "ask": "always"
+    },
+    "elevated": {
+      "enabled": false
+    }
+  },
+  "logging": {
+    "redactSensitive": "tools"
+  }
+}

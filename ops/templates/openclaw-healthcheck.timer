@@ -1,0 +1,10 @@
+[Unit]
+Description=Run OpenClaw health checks every minute
+
+[Timer]
+OnCalendar=*-*-* *:*:00
+AccuracySec=10s
+Persistent=true
+
+[Install]
+WantedBy=timers.target
