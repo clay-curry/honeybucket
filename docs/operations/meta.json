@@ -1,0 +1,9 @@
+{
+  "title": "Operations",
+  "pages": [
+    "production-gateway-runbook",
+    "host-provisioning-checklist",
+    "secrets-and-env-policy",
+    "validation-and-go-live-checklist"
+  ]
+}

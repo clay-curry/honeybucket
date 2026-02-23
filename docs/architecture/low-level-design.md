@@ -1,3 +1,7 @@
+---
+title: "Honeybucket Low-Level Design (LLD)"
+---
+
 # Honeybucket Low-Level Design (LLD)
 
 Last updated: 2026-02-22  

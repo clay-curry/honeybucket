@@ -1,3 +1,7 @@
+---
+title: Honeybucket Technical Runbook (OpenClaw)
+---
+
 # Honeybucket Technical Runbook (OpenClaw)
 
 This runbook is designed for one operator and one primary assistant account.

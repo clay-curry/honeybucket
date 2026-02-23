@@ -1,3 +1,7 @@
+---
+title: "Honeybucket High-Level Design (HLD)"
+---
+
 # Honeybucket High-Level Design (HLD)
 
 Last updated: 2026-02-22  

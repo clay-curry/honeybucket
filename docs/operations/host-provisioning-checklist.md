@@ -1,3 +1,7 @@
+---
+title: "Host Provisioning Checklist (Ubuntu 24.04 VPS)"
+---
+
 # Host Provisioning Checklist (Ubuntu 24.04 VPS)
 
 1. Run `sudo bash ops/linux/provision-ubuntu.sh`.

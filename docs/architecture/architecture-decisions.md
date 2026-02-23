@@ -1,3 +1,7 @@
+---
+title: "Honeybucket Architecture Decisions"
+---
+
 # Honeybucket Architecture Decisions
 
 Last updated: 2026-02-22

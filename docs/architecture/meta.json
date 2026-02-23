@@ -1,0 +1,9 @@
+{
+  "title": "Architecture",
+  "pages": [
+    "high-level-design",
+    "low-level-design",
+    "architecture-decisions",
+    "brainstorm-question-bank"
+  ]
+}

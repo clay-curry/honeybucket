@@ -1,3 +1,7 @@
+---
+title: "Secrets and Env Policy"
+---
+
 # Secrets and Env Policy
 
 ## Required and optional variables

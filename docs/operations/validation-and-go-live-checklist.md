@@ -1,3 +1,7 @@
+---
+title: "Validation and Go-Live Checklist"
+---
+
 # Validation and Go-Live Checklist
 
 ## Automated checks

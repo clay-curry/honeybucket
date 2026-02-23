@@ -1,3 +1,7 @@
+---
+title: "Production Gateway Runbook (Host-Based OpenClaw)"
+---
+
 # Production Gateway Runbook (Host-Based OpenClaw)
 
 Scope: single operator, one primary channel, host-based deployment (Linux VPS preferred).

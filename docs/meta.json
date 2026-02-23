@@ -1,0 +1,13 @@
+{
+  "title": "Honeybucket Docs",
+  "pages": [
+    "index",
+    "technical-runbook",
+    "project-charter",
+    "month-1-roadmap",
+    "workflow-playbooks",
+    "architecture",
+    "operations",
+    "trackers"
+  ]
+}

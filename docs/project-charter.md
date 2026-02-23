@@ -1,3 +1,7 @@
+---
+title: "Honeybucket Project Charter (Month 1)"
+---
+
 # Honeybucket Project Charter (Month 1)
 
 ## Project

@@ -1,3 +1,7 @@
+---
+title: "Honeybucket Architecture Brainstorm Question Bank"
+---
+
 # Honeybucket Architecture Brainstorm Question Bank
 
 Last updated: 2026-02-22
