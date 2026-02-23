@@ -112,10 +112,38 @@ if [[ -n "${AWS_PROFILE_NAME}" ]]; then
   export AWS_PROFILE="${AWS_PROFILE_NAME}"
 fi
 
+load_aws_login_credentials() {
+  # Keep explicitly provided credentials intact.
+  if [[ -n "${AWS_ACCESS_KEY_ID:-}" && -n "${AWS_SECRET_ACCESS_KEY:-}" ]]; then
+    return 0
+  fi
+
+  local export_cmd=(aws configure export-credentials --format env)
+  if [[ -n "${AWS_PROFILE:-}" ]]; then
+    export_cmd+=(--profile "${AWS_PROFILE}")
+  fi
+
+  local exported_credentials=""
+  if exported_credentials="$("${export_cmd[@]}" 2>/dev/null)" && [[ -n "${exported_credentials}" ]]; then
+    # The AWS CLI emits trusted `export KEY=VALUE` lines for the selected profile.
+    eval "${exported_credentials}"
+    export AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY AWS_SESSION_TOKEN AWS_CREDENTIAL_EXPIRATION
+    if [[ -n "${AWS_PROFILE:-}" ]]; then
+      echo "Loaded AWS session credentials for profile ${AWS_PROFILE}"
+    else
+      echo "Loaded AWS session credentials from default profile"
+    fi
+  fi
+}
+
+load_aws_login_credentials
+
 export TF_IN_AUTOMATION=1
+export AWS_SDK_LOAD_CONFIG=1
 
 if ! aws sts get-caller-identity >/dev/null 2>&1; then
   echo "Error: AWS credentials are not configured or not valid"
+  echo "Hint: run 'aws login' and retry."
   exit 1
 fi
 
