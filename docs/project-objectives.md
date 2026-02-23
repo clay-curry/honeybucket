@@ -1,8 +1,6 @@
 ---
-title: "Honeybucket Project Charter (Month 1)"
+title: "Project Objectives"
 ---
-
-# Honeybucket Project Charter (Month 1)
 
 ## Project
 
@@ -11,7 +9,7 @@ title: "Honeybucket Project Charter (Month 1)"
 - Project type: Personal AI assistant MVP on OpenClaw
 - Owner: Clay
 
-## Charter Table
+## Project Table
 
 | Workstream | Budget (Time) | Objectives | Success Criteria | Requirements | Out of Scope |
 |---|---:|---|---|---|---|

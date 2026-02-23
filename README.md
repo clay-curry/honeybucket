@@ -13,8 +13,8 @@ This repository starts as a planning and execution workspace for the first 30 da
 - `docs/operations/validation-and-go-live-checklist.md`: validation tests and go-live criteria
 - `docs/month-1-roadmap.md`: week-by-week build plan with effort estimates
 - `docs/month-1-deliverables.csv`: importable tracker (Notion/Sheets/Jira)
-- `docs/project-charter.md`: month-1 PM charter (budget, objectives, success criteria, scope)
-- `docs/project-charter-tracker.csv`: charter tracker by workstream
+- `docs/project-objectives.md`: month-1 PM charter (budget, objectives, success criteria, scope)
+- `docs/project-objectives-tracker.csv`: charter tracker by workstream
 - `docs/workflow-playbooks.md`: workflow specs and acceptance criteria
 - `docs/architecture/brainstorm-question-bank.md`: structured question bank to drive HLD/LLD workshops
 - `docs/architecture/high-level-design.md`: external-stakeholder HLD for month-1 Honeybucket MVP

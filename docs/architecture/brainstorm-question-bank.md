@@ -15,7 +15,7 @@ Use this question bank to run structured architecture workshops for the month-1 
 - HLD workshop timebox: 60 minutes
 - LLD workshop timebox: 90 minutes
 - Required inputs:
-  - `docs/project-charter.md`
+  - `docs/project-objectives.md`
   - `docs/month-1-roadmap.md`
   - `docs/workflow-playbooks.md`
   - `docs/technical-runbook.md`

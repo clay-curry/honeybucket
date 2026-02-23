@@ -2,8 +2,8 @@
   "title": "Honeybucket Docs",
   "pages": [
     "index",
+    "project-objectives",
     "technical-runbook",
-    "project-charter",
     "month-1-roadmap",
     "workflow-playbooks",
     "architecture",

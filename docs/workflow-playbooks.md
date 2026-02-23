@@ -1,8 +1,6 @@
 ---
-title: "Honeybucket Workflow Playbooks"
+title: "Workflow Playbooks"
 ---
-
-# Honeybucket Workflow Playbooks
 
 ## Workflow #4: Daily OpenClaw Power Users, Updates, and Trends
 

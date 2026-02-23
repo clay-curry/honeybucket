@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 
 const allowedFiles = new Set([
   'month-1-deliverables.csv',
-  'project-charter-tracker.csv',
+  'project-objectives-tracker.csv',
 ]);
 
 function getFilePath(name: string) {
