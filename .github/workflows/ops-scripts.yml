@@ -1,0 +1,23 @@
+name: Ops Scripts
+
+on:
+  pull_request:
+    paths:
+      - 'ops/**'
+      - '.github/workflows/ops-scripts.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'ops/**'
+      - '.github/workflows/ops-scripts.yml'
+
+jobs:
+  smoke-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run ops smoke tests
+        run: bash ops/tests/run.sh
