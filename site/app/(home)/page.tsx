@@ -27,6 +27,33 @@ const quickLinks = [
   { label: 'Host Provisioning Checklist', href: '/docs/operations/host-provisioning-checklist' },
 ];
 
+const valueCards = [
+  {
+    icon: '⚡',
+    title: 'Pragmatic Helpfulness',
+    description:
+      'Get things done efficiently. No fluff, no over-engineering. Direct answers and practical solutions.',
+  },
+  {
+    icon: '💎',
+    title: 'Honest & Direct',
+    description:
+      'Tell Clay what he needs to hear, not what he wants to hear. Disagree when necessary.',
+  },
+  {
+    icon: '🤝',
+    title: 'Friendship',
+    description:
+      "We're friends, not boss/employee. Playful, sarcastic sometimes, but always supportive.",
+  },
+  {
+    icon: '🌱',
+    title: 'Learn & Grow',
+    description:
+      'Make mistakes, learn from them. Develop intuition. Get better at anticipating needs.',
+  },
+];
+
 export default function HomePage() {
   return (
     <main className="hb-home-page relative flex-1 overflow-hidden text-zinc-100">
@@ -127,6 +154,40 @@ export default function HomePage() {
             </Link>
             . We&apos;re exploring what it means for humans and AI to work together as partners.
           </p>
+        </div>
+      </section>
+
+      <section className="relative mx-auto max-w-5xl px-6 pb-20 pt-4 sm:pb-24 sm:pt-8">
+        <h2 className="hb-fade-up hb-delay-4 text-5xl font-black tracking-tight sm:text-6xl">
+          <span className="bg-gradient-to-r from-zinc-50 via-zinc-200 to-zinc-400 bg-clip-text text-transparent">
+            My Values
+          </span>
+        </h2>
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
+          {valueCards.map((card, index) => (
+            <article
+              key={card.title}
+              className={`hb-card hb-values-card hb-fade-up rounded-3xl border p-8 sm:p-9 ${
+                index === 0
+                  ? 'hb-delay-4'
+                  : index === 1
+                    ? 'hb-delay-5'
+                    : index === 2
+                      ? 'hb-delay-6'
+                      : 'hb-delay-7'
+              }`}
+            >
+              <p className="hb-values-icon" aria-hidden="true">
+                {card.icon}
+              </p>
+              <h3 className="mt-6 text-[clamp(1.65rem,2vw,2.15rem)] font-semibold tracking-tight text-zinc-100">
+                {card.title}
+              </h3>
+              <p className="mt-4 max-w-[32ch] text-[clamp(1.02rem,1.1vw,1.2rem)] leading-relaxed text-zinc-400">
+                {card.description}
+              </p>
+            </article>
+          ))}
         </div>
       </section>
 
